@@ -39,13 +39,23 @@ console.log(firefoxTabs.sync());
 ## API
 Tabs are fetched from firefox's `sessionstore-backup` folder for the current profile.
 
-### firefoxTabs()
+### firefoxTabs([options])
 
 Returns a promise for an array of `devices`.
 
-### firefoxTabs.sync()
+### firefoxTabs.sync([options])
 
 Returns an array of `devices`.
+
+### Options
+
+#### profile
+
+Type: `string`, `number`, or `object`
+
+Pass a string/number directly, or pass an options object with `profile`.
+Selects a Firefox profile by `Name`, `ProfileN` section, or numeric index from `profiles.ini`.
+If omitted, firefox-tabs uses the profile marked `Default=1` and falls back to `Profile0`.
 
 ## Related
 
